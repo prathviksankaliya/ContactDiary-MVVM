@@ -1,6 +1,7 @@
 package com.itcraftsolution.contactdiary.Adapters;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,18 +10,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.itcraftsolution.contactdiary.Database.TBLContact;
 import com.itcraftsolution.contactdiary.Models.Contact;
 import com.itcraftsolution.contactdiary.R;
 import com.itcraftsolution.contactdiary.databinding.SampleContactRowBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ContactRecyclerAdapter extends RecyclerView.Adapter<ContactRecyclerAdapter.viewHolder> {
 
-    private ArrayList<Contact> list;
+    private List<TBLContact> list;
     private Context context;
 
-    public ContactRecyclerAdapter(Context context, ArrayList<Contact> list) {
+    public ContactRecyclerAdapter(Context context, List<TBLContact> list) {
         this.context = context;
         this.list = list;
     }
@@ -34,11 +37,12 @@ public class ContactRecyclerAdapter extends RecyclerView.Adapter<ContactRecycler
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        Contact contact = list.get(position);
+        TBLContact contact = list.get(position);
 
         holder.binding.txContactName.setText(contact.getName());
-        holder.binding.txContactPhoneNumber.setText(contact.getPhoneNumber());
-        Glide.with(context).load(contact.getImage()).into(holder.binding.igContactImage);
+        holder.binding.txContactPhoneNumber.setText(contact.getPhone());
+        Glide.with(context).load(Uri.parse(contact.getImage())).into(holder.binding.igContactImage);
+//        holder.binding.igContactImage.setImageURI(Uri.parse(contact.getImage()));
     }
 
     @Override

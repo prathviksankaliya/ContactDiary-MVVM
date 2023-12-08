@@ -2,22 +2,17 @@ package com.itcraftsolution.contactdiary.Fragments;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
-
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.itcraftsolution.contactdiary.Database.TBLContact;
 import com.itcraftsolution.contactdiary.R;
@@ -65,6 +60,7 @@ public class AddContactFragment extends Fragment {
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 launchGallery.launch(intent);
+
             }
         });
 

@@ -4,10 +4,12 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.room.Database;
+import androidx.lifecycle.LiveData;
 
 import com.itcraftsolution.contactdiary.Database.DatabaseHelper;
 import com.itcraftsolution.contactdiary.Database.TBLContact;
+
+import java.util.List;
 
 public class ContactViewModel extends AndroidViewModel {
 
@@ -19,5 +21,9 @@ public class ContactViewModel extends AndroidViewModel {
 
     public void addContact(TBLContact tblContact){
         databaseHelper.databaseInterface().addContact(tblContact);
+    }
+
+    public List<TBLContact> getAllContacts(){
+        return databaseHelper.databaseInterface().getAllContacts();
     }
 }
