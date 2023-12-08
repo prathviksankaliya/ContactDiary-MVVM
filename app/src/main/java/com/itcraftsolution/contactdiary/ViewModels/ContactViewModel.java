@@ -26,4 +26,12 @@ public class ContactViewModel extends AndroidViewModel {
     public List<TBLContact> getAllContacts(){
         return databaseHelper.databaseInterface().getAllContacts();
     }
+
+    public LiveData<List<TBLContact>> getAllLiveContacts(){
+        return databaseHelper.databaseInterface().getAllLiveContacts();
+    }
+
+    public void deleteContact(String phone){
+        databaseHelper.databaseInterface().deleteContact(phone);
+    }
 }

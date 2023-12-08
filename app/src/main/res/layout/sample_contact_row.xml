@@ -43,9 +43,9 @@
                 android:gravity="center_vertical"
                 android:maxLines="1"
                 android:maxLength="20"
-                android:text="Prathvik Sankaliyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:text="Prathvik Sankaliyaaaaa"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="19sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -67,11 +67,11 @@
             android:background="#37000000"
             android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
-            app:layout_constraintEnd_toStartOf="@+id/igContactCall"
+            app:layout_constraintEnd_toStartOf="@+id/igContactDelete"
             app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
 
         <ImageView
-            android:id="@+id/igContactCall"
+            android:id="@+id/igContactDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

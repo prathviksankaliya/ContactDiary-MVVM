@@ -2,6 +2,7 @@ package com.itcraftsolution.contactdiary.Database;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -16,4 +17,10 @@ public interface DatabaseInterface {
 
     @Query("select * from TBLContact")
     List<TBLContact> getAllContacts();
+
+    @Query("select * from TBLContact")
+    LiveData<List<TBLContact>> getAllLiveContacts();
+
+    @Query("delete from TBLContact where phone= :phoneNumber")
+    void deleteContact(String phoneNumber);
 }

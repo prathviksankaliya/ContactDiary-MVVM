@@ -64,5 +64,9 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel:2.6.2")
     implementation ("androidx.lifecycle:lifecycle-livedata:2.6.2")
 
+    //Dexter Permission
+    implementation ("com.karumi:dexter:6.2.3")
+
+    implementation ("com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1")
 
 }
