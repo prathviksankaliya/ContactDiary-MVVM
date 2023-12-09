@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
 //        these results are not liveData
 //        list = contactViewModel.getAllContacts();
 
-        adapter = new ContactRecyclerAdapter(requireContext(), list);
+        adapter = new ContactRecyclerAdapter(requireContext(), getParentFragmentManager(), list);
         binding.rvContactList.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.rvContactList.setAdapter(adapter);
 

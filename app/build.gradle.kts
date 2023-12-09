@@ -67,6 +67,4 @@ dependencies {
     //Dexter Permission
     implementation ("com.karumi:dexter:6.2.3")
 
-    implementation ("com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1")
-
 }

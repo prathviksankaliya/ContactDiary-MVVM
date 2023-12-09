@@ -23,4 +23,7 @@ public interface DatabaseInterface {
 
     @Query("delete from TBLContact where phone= :phoneNumber")
     void deleteContact(String phoneNumber);
+
+    @Query("Update TBLContact set name=:name, phone= :newPhone, image=:image, email=:email where phone=:oldPhone")
+    void updateContact(String name, String oldPhone, String newPhone, String email, String image);
 }

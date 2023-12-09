@@ -34,4 +34,8 @@ public class ContactViewModel extends AndroidViewModel {
     public void deleteContact(String phone){
         databaseHelper.databaseInterface().deleteContact(phone);
     }
+
+    public void updateContact(String name, String oldPhone, String newPhone, String email, String image){
+        databaseHelper.databaseInterface().updateContact(name, oldPhone, newPhone, email, image);
+    }
 }
